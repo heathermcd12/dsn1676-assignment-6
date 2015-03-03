@@ -51,18 +51,23 @@ div {
 }
 
 .js-diamond-move {
-   right: -10em;
+   right: -40em;
 }
 
 .panel {
   width: 250px;
   top: 50%;
-
   background-color: yellow;
   transform: translateY(-50%);
-
   color: darkgoldenrod;
+  overflow: hidden;
   text-align: center;
+  transition: all 250ms ease-out;
+    max-height: 7em;
+}
+
+.js-panel-expand {
+    max-height: 0em;
 }
 
 .panel h2 {
@@ -74,8 +79,28 @@ div {
   height: 100px;
   top: calc(50% - 50px);
   width: 100px;
-
+  border-radius: 58%;
   background-color: orange;
+}
+
+.js-circle-bounce {
+    @keyframes box-bounce {
+    
+    0%{transform: translateY(0);}
+    
+    50% {transform: translateX(-50px);
+        transform: rotate(50deg);
+        transform: scale(1.5,1.5);}
+    
+    80% {transform: translateX(-1200px);}
+    
+    90% {transform: translateY(50px);}
+    
+    
+    100% {transform: translateX(-600px);
+        background-color: yellow;
+        transform: scale(-1.5,-1.5); }
+    }
 }
 
 .list {

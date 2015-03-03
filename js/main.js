@@ -7,6 +7,12 @@ var $diamond = $('.diamond');
 var $btnCollapseExpand = $('.btn-collapse-expand');
 var $panel = $('.panel');
 
+var $btnBounce = $('.btn-bounce');
+var $circle = $('.circle');
+
+var $btnAppend = $('.btn-append');
+var $list = $('.list');
+
 console.log ($diamond);
 console.log ($box);
 console.log($panel);
@@ -22,4 +28,12 @@ $btnMove.on ('click', function () {
 
 $btnCollapseExpand.on ('click', function () {
     $panel.toggleClass('js-panel-expand');
+});
+
+$btnBounce.on ('click', function () {
+    $circle.toggleClass('js-circle-bounce');
+});
+
+$btnAppend.on ('click', function () {
+    $list.toggleClass('js-list-append');
 });
