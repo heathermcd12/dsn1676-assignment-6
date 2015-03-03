@@ -84,23 +84,136 @@ div {
 }
 
 .js-circle-bounce {
-    @keyframes box-bounce {
     
-    0%{transform: translateY(0);}
+    -webkit-animation: circle-bounce 1s linear; 
+    animation: circle-bounce 1s linear; 
+}
+
+ @-webkit-keyframes circle-bounce {
+     
+   0% {
+       top: 40px;
+       right: -12px;
+   }
+     
+   10% {
+       right: 20px;
+       top: 10px;
+   }
+     
+   30% {
+       right: 30px;
+       top: 50px;
+   }
+     
+   50% {
+       right: 40px;
+       top: 40px;
+   }
+     
+   60% {
+       right: 60px;
+       bottom: 30px;
+   }
+     
+   70% {
+       right: 80px;
+       top: 20px;
+   }
+   
+   75% {
+       right: 100px;
+       top: 10px;
+   }
+     
+   80% {
+       right: 160px;
+       top: 30px;
+   }
+     
+   85% {
+       right: 200px;
+       top: 40px;
+   }
+     
+   90% {
+       right: 220px;
+       top: 70px;
+   }
+     
+   95% {
+       right: 260px;
+       top: 10px;
+   }
+     
+   100% {
+       right: 300px;
+       top: 0;
+   }
+}
+
     
-    50% {transform: translateX(-50px);
-        transform: rotate(50deg);
-        transform: scale(1.5,1.5);}
-    
-    80% {transform: translateX(-1200px);}
-    
-    90% {transform: translateY(50px);}
-    
-    
-    100% {transform: translateX(-600px);
-        background-color: yellow;
-        transform: scale(-1.5,-1.5); }
-    }
+ @keyframes circle-bounce {
+     
+   0% {
+       top: 40px;
+       right: -12px;
+   }
+     
+   10% {
+       right: 20px;
+       top: 10px;
+   }
+     
+   30% {
+       right: 30px;
+       top: 50px;
+   }
+     
+   50% {
+       right: 40px;
+       top: 40px;
+   }
+     
+   60% {
+       right: 60px;
+       bottom: 30px;
+   }
+     
+   70% {
+       right: 80px;
+       top: 20px;
+   }
+   
+   75% {
+       right: 100px;
+       top: 10px;
+   }
+     
+   80% {
+       right: 160px;
+       top: 30px;
+   }
+     
+   85% {
+       right: 200px;
+       top: 40px;
+   }
+     
+   90% {
+       right: 220px;
+       top: 70px;
+   }
+     
+   95% {
+       right: 260px;
+       top: 10px;
+   }
+     
+   100% {
+       right: 300px;
+       top: 0;
+   }
 }
 
 .list {
@@ -119,9 +232,35 @@ div {
 
 .list li {
   padding: 0.5em;
-
+  overflow: hidden;
   background-color: plum;
   border: 1px solid mediumpurple;
-
   color: mediumpurple;
 }
+
+.js-panel-expand {
+    
+    -webkit-animation: list-stack 500ms ease-in;
+    animation: list-stack 500ms ease-in;
+}
+    
+     @-webkit-keyframes list-stack {
+        0% {
+            max-height: 0px;
+        }
+        
+        100% {
+            max-height: 4em;
+        }
+    }
+
+
+    @keyframes list-stack {
+        0% {
+            max-height: 0px;
+        }
+        
+        100% {
+            max-height: 4em;
+        }
+    }
